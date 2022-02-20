@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: hsl(226, 43%, 10%);
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: 950px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 17px;
+}
+
+.col-1 {
+    display: grid;
+    grid-auto-rows: 393px;
+}
+
+.col-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 17px;
+}
+
+.card {
+    background-color: wheat;
+    border-radius: 1rem;
+    position: relative;
+    background-color: hsl(235, 46%, 20%);
+}
+
+.card-profile {
+    background-color: hsl(235, 46%, 20%);
+}
+
+.head-user {
+    background-color: hsl(246, 80%, 60%);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    height: 68%;
+}
+
+.time {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.head-user p {
+    margin-top: 2.5rem;
+    font-size: 13px;
+    color: white;
+    font-weight: 300;
+}
+
+.name-user {
+    font-size: 3.7rem;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 0rem;
+}
+
+.img-user {
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.time {
+    padding: 2.5rem;
+}
+
+.date {
+    color: hsl(236, 100%, 87%);
+    font-size: 13px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.active {
+    color: hsl(240, 20%, 99%);
+    font-weight: 500;
+}
+
+.card .bg-top {
+    border-radius: 1rem;
+    height: 29%;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.bg-play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+.bg-study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+.bg-exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+
+.bg-social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+.bg-self {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.bg-top img {
+    width: 53px;
+    position: absolute;
+    right: 15px;
+}
+
+.content-card {
+    background-color: hsl(235, 46%, 20%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80.5%;
+    border-radius: 1rem;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.content-card2 {
+    background-color: hsl(235, 46%, 20%);
+    filter: brightness(1.5);
+    z-index: 1;
+}
+
+.actividad {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 46px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+@media(max-width:475px) {
+    .cards {
+        grid-template-columns: auto;
+    }
+    .col-2 {
+        grid-template-columns: none;
+        row-gap: 20px;
+        grid-template-rows: repeat(6, 150px);
+    }
+    .col-1 {
+        grid-template-rows: 180px;
+        margin-bottom: 0px;
+    }
+    .head-user {
+        display: flex;
+        align-items: center;
+    }
+    .info-user {
+        margin-left: 1.5rem;
+    }
+    .info-user p {
+        font-size: 12.5px;
+        margin-bottom: .3rem;
+        margin-top: 0;
+    }
+    .name-user {
+        font-size: 24px;
+    }
+    .time {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 15px auto auto;
+        text-align: center;
+    }
+    .date {
+        margin-bottom: 0;
+    }
+    .bottom-card {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content-card {
+        height: 72%;
+    }
+    .card .bg-top {
+        height: 35%;
+    }
+    .header-card {
+        margin-bottom: 1rem;
+    }
+    .title {
+        font-size: 33px;
+    }
+    .cards {
+        margin: 5rem 0;
+    }
+}
